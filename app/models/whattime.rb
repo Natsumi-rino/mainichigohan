@@ -1,0 +1,2 @@
+class Whattime < ApplicationRecord
+end

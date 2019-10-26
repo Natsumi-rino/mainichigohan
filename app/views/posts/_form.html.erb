@@ -1,0 +1,47 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field pt-3">
+    <%= form.label :タイトル %>
+    <%= form.text_field :title, id: :post_title, class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="field pt-3">
+    <%= form.label :写真 %>
+    <%= form.file_field :img, class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="field pt-3">
+    <%= form.label :ごはんどき %>
+    <%= form.select :whattime_id, [["朝ごはん",1], ["昼ごはん", 2], ["夜ごはん", 3]], class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="field pt-3">
+    <%= form.label :おうちごはんシチュエーション %>
+    <%= form.select :howmany_id, [["ひとりごはん", 1], ["ふたりごはん", 2], ["みんなでわいわいごはん", 3]], class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="field pt-3">
+    <%= form.label :どんなごはん？ %>
+    <%= form.text_area :free, id: :post_free, class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="field pt-3">
+    <%= form.label :参考にしたサイト %>
+    <%= form.text_field :website, id: :post_website, class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="actions pt-3">
+    <%= form.submit "投稿", class: "btn btn-primary" %>
+  </div>
+<% end %>

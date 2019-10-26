@@ -1,0 +1,550 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+
+/* 以下テンプレ */
+@import url("font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Raleway:100,200,300,500,600,700,800,900");
+
+/*
+	Phase Shift by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+/* Basic */
+.wf-nicomoji {
+	 font-family: "Nico Moji";
+ }
+
+ .wf-roundedmplus1c {
+	  font-family: "M PLUS Rounded 1c";
+	}
+
+	body {
+		background: #fcecc7;
+	}
+
+	body, span, input, select, textarea {
+		color: #555555;
+		font-family: "M PLUS Rounded 1c",'Raleway', sans-serif;
+		font-size: 12pt;
+		font-weight: 300;
+		line-height: 1.65em;
+	}
+
+	a {
+		color: #d84780;
+		text-decoration: underline;
+	}
+
+	strong, b {
+		font-weight: 700;
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	p, ul, ol, dl, table, blockquote {
+		margin: 0 0 2em 0;
+	}
+
+	p {
+    color: #6C90B2;
+		line-height: 2em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		padding: 0;
+		color: #FF7F50;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+	}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	sub {
+		font-size: 0.8em;
+		position: relative;
+		top: 0.5em;
+	}
+
+	sup {
+		font-size: 0.8em;
+		position: relative;
+		top: -0.5em;
+	}
+
+	hr {
+		border-top: solid 1px #888888;
+		border: 0;
+		margin-bottom: 1.5em;
+	}
+
+	blockquote {
+		border-left: solid 0.5em #888888;
+		font-style: italic;
+		padding: 1em 0 1em 2em;
+	}
+
+	section.special, article.special {
+		text-align: center;
+	}
+
+	header.major {
+		padding-bottom: 3em;
+		text-transform: uppercase;
+	}
+
+		header.major h2 {
+			margin: 0;
+			padding: 0;
+			line-height: 1em;
+			font-weight: 800;
+			font-size: 2.8em;
+		}
+
+		header.major .byline {
+			display: block;
+			margin: 0.50em 0 0 0;
+			padding: 0 0 0.5em 0;
+			letter-spacing: 1px;
+			font-size: 1.3em;
+			font-weight: 300;
+		}
+
+	footer > :last-child {
+		margin-bottom: 0;
+	}
+
+	footer.major {
+		padding-top: 3em;
+	}
+
+/* Form */
+
+	form {
+		width: 70%;
+		margin: 0em auto;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-o-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		background: white;
+		color: #555555;
+		border: none;
+		display: block;
+		outline: 0;
+		padding: 1em 1em;
+		text-decoration: none;
+		width: 100%;
+		border-radius: 6px;
+	}
+
+		input[type="text"]:focus,
+		input[type="password"]:focus,
+		input[type="email"]:focus,
+		textarea:focus {
+			border-color: #d84780;
+		}
+
+	textarea {
+		min-height: 14em;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		line-height: 1em;
+	}
+
+	::-webkit-input-placeholder {
+		color: inherit;
+		opacity: 0.5;
+		position: relative;
+		top: 3px;
+	}
+
+	:-moz-placeholder {
+		color: inherit;
+		opacity: 0.5;
+	}
+
+	::-moz-placeholder {
+		color: inherit;
+		opacity: 0.5;
+	}
+
+	:-ms-input-placeholder {
+		color: inherit;
+		opacity: 0.5;
+	}
+
+	.formerize-placeholder {
+		color: rgba(85, 85, 85, 0.5) !important;
+	}
+
+/* Image */
+
+
+/* Tables */
+
+	table {
+		width: 100%;
+	}
+
+		table.default {
+			width: 100%;
+		}
+
+			table.default tbody tr {
+				border-bottom: solid 1px #888888;
+			}
+
+			table.default td {
+				padding: 0.5em 1em 0.5em 1em;
+			}
+
+			table.default th {
+				font-weight: 700;
+				padding: 0.5em 1em 0.5em 1em;
+				text-align: left;
+			}
+
+			table.default thead {
+				background: #555555;
+				color: #fff;
+			}
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-o-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.35s ease-in-out;
+		-webkit-transition: background-color 0.35s ease-in-out;
+		-o-transition: background-color 0.35s ease-in-out;
+		-ms-transition: background-color 0.35s ease-in-out;
+		transition: background-color 0.35s ease-in-out;
+		background: #d84780;
+		border-radius: 6px;
+		border: 0;
+		color: white;
+		cursor: pointer;
+		display: inline-block;
+		padding: 0.75em 1.5em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		display: inline-block;
+		font-size: 1.2em;
+		font-weight: 600;
+		color: #FFF !important;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		.button:hover {
+			background: #e1719d;
+		}
+
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		input[type="button"].alt,
+		.button.alt {
+			border: 1px solid #FFF;
+			color: #0f1116;
+		}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		.button.fit {
+			width: 100%;
+		}
+
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		.button.small {
+			font-size: 0.8em;
+		}
+
+		input[type="submit"].medium,
+		input[type="reset"].medium,
+		input[type="button"].medium,
+		.button.medium {
+			padding: 0.80em 2em;
+			font-size: 1.6em;
+		}
+
+/* Header */
+
+	#header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: #ecd6c7;
+		color: #fff;
+		padding: 1.25em 1.25em 1.25em 1.25em;
+		z-index: 100;
+	}
+
+	.header-bg {
+  background-image: url("/assets/mediterranean-cuisine-2378758_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Logo */
+
+	#logo {
+		font-size: 1.2em;
+		cursor: default;
+	}
+
+	#logo h1 {
+		display: inline-block;
+		text-transform: uppercase;
+	}
+
+/* Navigation */
+
+	#nav {
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: default;
+	}
+
+	#nav ul li {
+		display: inline-block;
+		padding: 1.25em 1.25em;
+	}
+
+	#nav ul li a {
+		-moz-transition: color 0.35s ease-in-out;
+		-webkit-transition: color 0.35s ease-in-out;
+		-o-transition: color 0.35s ease-in-out;
+		-ms-transition: color 0.35s ease-in-out;
+		transition: color 0.35s ease-in-out;
+		display: inline-block;
+		color: #ddd;
+		color: rgba(255, 255, 255, 0.75);
+		text-decoration: none;
+	}
+
+	#nav ul li a:hover {
+		color: #D96738;
+	}
+
+/* Banner */
+
+	#banner {
+		text-align: center;
+		color: #fff;
+		padding: 0em 4em;
+		margin-bottom: 6em;
+	}
+
+		#banner p {
+			font-size: 1.75em;
+			line-height: 1.75em;
+		}
+
+	#banner strong,
+	#banner a {
+		color: inherit;
+	}
+
+/* Main */
+.container_box{
+	margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  }
+/* Footer */
+
+	#footer {
+		text-align: center;
+	}
+
+		#footer .major h2,
+		#footer .major .byline {
+			color: #FFF !important;
+		}
+
+/* Page */
+
+	#page {
+		position: relative;
+		background: #FFF;
+		padding: 6em 4em 6em 4em;
+		border-radius: 6px;
+	}
+
+/* Sidebar */
+
+	#sidebar .major {
+		padding-bottom: 2em;
+	}
+
+		#sidebar .major h2 {
+			font-size: 1.8em;
+		}
+
+/* Copyright */
+
+	#copyright {
+		color: #ddd;
+		color: rgba(255, 255, 255, 0.2) !important;
+		text-align: center;
+		display: block;
+		padding: 3em 0em;
+	}
+
+		#copyright a {
+			text-decoration: none;
+			color: #ddd;
+			color: rgba(255, 255, 255, 0.4) !important;
+		}
+
+/* Box */
+
+	.box {
+		padding: 3em 2em;
+		background: #FFF;
+		text-align: center;
+		border-radius: 0px 0px 6px 6px;
+	}
+
+/* サルワカからのcss */
+
+h13{
+	font-size: 30px;
+  position: relative;
+}
+
+h13:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+  background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+}
+.ribbon19-wrapper {
+  display: block;
+  position: relative;
+  margin: 15px auto;
+  padding: 10px 0;
+  width: 600px;
+  height: 1000px;
+  background: #f1f1f1;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
+}
+
+.ribbon19-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  }
+
+.ribbon19 {
+  display: inline-block;
+  position: absolute;
+  padding: 10px 0;
+  left: -24px;
+  top: 20px;
+  width: 100px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 16px;
+  background: #39c3d4;
+  color: #fff;
+  letter-spacing: 0.05em;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 2px rgb(57, 195, 212);
+  border-top: dashed 1px rgba(255, 255, 255, 0.65);
+  border-bottom: dashed 1px rgba(255, 255, 255, 0.65);
+}
+
+h10 {
+  color: #ea7070;/*文字色*/
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px #6ad1c8;
+}
+
+h11 {
+	font-size: 40px;
+  position: relative;
+}
+
+
+.box30 {
+    margin: 2em 0;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+.box30 .box-title {
+    font-size: 1.2em;
+    background: #6ad1c8;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.box30 p {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+
+ .fa-utensils{
+	 color: #FF7F50
+ }
+
+ .card-deck{
+	 margin-top: 300px;
+ }

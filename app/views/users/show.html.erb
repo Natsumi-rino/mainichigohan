@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+
+    </div>
+<div class="col-md-10">
+  <div class="box30">
+    <div class="box-title">
+<h11 class="text-center pt-5"><%= @user.name %></h11><br>
+<%= link_to "フォロー: #{@user.following.count}", following_user_path(@user) %>
+
+<%= link_to "フォロワー: #{@user.followers.count}", followers_user_path(@user) %>
+
+<% if current_user != @user %>
+  <% if current_user.following?(@user) %>
+    <%= form_for(current_user.active_relationships.find_by(followed_id: @user.id), html:{method: :delete}) do |f| %>
+      <%= f.submit 'Unfollow' %>
+    <% end %>
+  <% else %>
+    <%= form_for(current_user.active_relationships.build) do |f| %>
+      <div><%= hidden_field_tag :followed_id, @user.id %></div>
+      <%= f.submit "Follow" %>
+    <% end %>
+  <% end %>
+<% end %>
+    </div>
+<p><%= image_tag @user.pic_url, :class => "image_top" %><br>
+<%= @user.profile %></p><br>
+
+<div class="row">
+  <% @post.each do |post| %>
+    <div class="col-sm-4 col-xs-6">
+      <div class="card">
+        <%= image_tag post.img_url, :class => "image_top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= post.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= post.user.name %></h6>
+          <%= link_to 'みてみる', post %>
+          <span class="time">
+          <%= post.created_at.strftime('%Y/%m/%d') %>
+          </span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+
+<br>
+</div>
+<%= link_to 'アカウント編集', edit_user_registration_path %>
+<%= link_to 'もどる', posts_path %>
+<div class="col-md-1">
+
+</div>
+</div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+
+    </div>
+<div class="col-md-10">
+<h2 class="text-center text-weight-bold pt-5">新しく登録する！</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field pt-3">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autofocus: true %>
+    </div>
+
+  <div class="field pt-3">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="field pt-3">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="field pt-3">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "とうろく！", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>
+</div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

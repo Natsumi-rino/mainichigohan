@@ -1,0 +1,83 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.image_top{
+  height: 180px;
+  width: 286px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.image_big{
+  height: 400px;
+  width: 400px;
+  object-fit: contain;
+}
+
+.image_dish{
+  width: 800px;
+}
+
+.card-body span{
+  float: right;
+}
+
+.card{
+  margin-bottom:30px;
+}
+
+.container{
+  margin-top: 100px;
+}
+
+.flex {
+    width: 50vw;
+    height: 80px;
+    line-height: 80px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25vw;
+
+    ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 10px 20px 0 rgba(black, 0.25);
+
+        li {
+            flex: 1;
+            list-style: none;
+            text-align: center;
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.5s ease;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                background-color: rgba(white, 0.25);
+                color: #f564a9;
+
+                @for $i from 2 through 5 {
+                    &:nth-of-type(#{$i}) ~ .bar {
+                        left: $i * 20% - 20%;
+                    }
+                }
+            }
+        }
+
+        .bar {
+            width: 20%;
+            background-color: #f564a9;
+            height: 5px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s ease;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  whattime: 1
+  howmany: 1
+  free: MyText
+  website: MyString
+
+two:
+  title: MyString
+  whattime: 1
+  howmany: 1
+  free: MyText
+  website: MyString

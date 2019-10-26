@@ -1,0 +1,49 @@
+
+<div id="header" class="skel-panels-fixed">
+						<div id="logo">
+						  <h1 class="wf-nicomoji"><i class="fas fa-utensils"></i>まいにちごはん！</h1>
+						</div>
+						<nav id="nav">
+							<ul>
+                <li><%= link_to 'ごはんを投稿する', new_post_path %></li>
+								<li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+								<li><%= link_to 'マイページ', user_path(id: current_user.id) %></li>
+							</ul>
+						</nav>
+					</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+
+    </div>
+<div class="col-md-10">
+<p id="notice"><%= notice %></p>
+<%= page_entries_info @posts %>
+
+<div class="row">
+  <% @posts.each do |post| %>
+    <div class="col-sm-4 col-xs-6">
+      <div class="card">
+        <%= image_tag post.img_url, :class => "image_top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= post.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= post.user.name %></h6>
+          <%= link_to 'みてみる', post %>
+					<span class="time">
+					<%= post.created_at.strftime('%Y/%m/%d') %>
+					</span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+
+
+<%= paginate @posts %>
+</div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>

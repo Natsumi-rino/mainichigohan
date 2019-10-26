@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+    </div>
+<div class="col-md-6">
+  <div class="box30">
+    <div class="box-title">
+<h11 class="text-center pt-5"><%= @user.name %>のフォロワー</h11><br>
+    </div>
+
+<ul>
+  <% @user.followers.each do |user| %>
+    <li>
+      <p><%= link_to "#{user.to_name}", user_path(user) %></p>
+    </li>
+  <% end %>
+  </ul>
+  <br><br><br><br>
+  </div>
+
+<br><br><br><br>
+  <%= link_to 'もどる', posts_path %>
+
+</div>
+    <div class="col-md-3">
+
+    </div>
+  </div>
+</div>

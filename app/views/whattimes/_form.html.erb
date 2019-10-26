@@ -1,0 +1,22 @@
+<%= form_with(model: whattime, local: true) do |form| %>
+  <% if whattime.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(whattime.errors.count, "error") %> prohibited this whattime from being saved:</h2>
+
+      <ul>
+      <% whattime.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :whattime_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

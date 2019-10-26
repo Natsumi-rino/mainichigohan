@@ -1,0 +1,88 @@
+<div class="row">
+  <%= image_tag '/assets/72878841_p4.png', :class => "image_dish col-md-6" %>
+  <%= image_tag '/assets/72878841_p4_3.png', :class => "image_dish col-md-6" %>
+</div>
+<div class="container_box">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+    <!-- Banner -->
+      <section>
+      <i class="fas fa-utensils fa-7x"></i>
+      <h1 class="wf-nicomoji" text-center pt-5">まいにちごはん！</h1>
+      <p>自炊したごはんをシェアして、自炊生活をもっとたのしく。<br>まいにちのごはんのおともに。</p>
+      </section>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+  <div class="row">
+    <%= image_tag '/assets/72878841_p4.png', :class => "image_dish col-md-6" %>
+    <%= image_tag '/assets/72878841_p4_3.png', :class => "image_dish col-md-6" %>
+  </div>
+</div>
+
+  <div class="container_box">
+          <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-10">
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="/assets/background-906135_640.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title wf-roundedmplus1c">日々の自炊生活のモチベに</h5>
+            <p class="card-text wf-roundedmplus1c">自炊した料理を一枚ずつ投稿して、友達にシェアできます。</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="/assets/coffee-1076582_640.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title wf-roundedmplus1c">友達のレシピを真似したり</h5>
+            <p class="card-text wf-roundedmplus1c">友達が参考にしたレシピを見ることができます。</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="/assets/manipulation-1875815_640.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title wf-roundedmplus1c">留学中のごはんもシェア</h5>
+            <p class="card-text wf-roundedmplus1c">留学している友達もふだんのごはんで交流しましょう。</p>
+          </div>
+        </div>
+      </div>
+<br><br><br>
+<h1 class="wf-nicomoji text-center pt-5">\てをあわせてください！/</h1>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-md-12 form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: "col-md-12 form-control" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :保存しておく %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>
+<br><br><br><br><br>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>
+</div>

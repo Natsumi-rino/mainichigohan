@@ -1,0 +1,66 @@
+<center>
+<div class="row">
+  <div class="col-md-1">
+
+  </div>
+<div class="col-md-10">
+<p id="notice"><%= notice %></p>
+
+<h1 class="wf-nicomoji">きょうのごはん</h1>
+<div class="ribbon19-wrapper">
+  <h13><%= @post.title %></h13>
+  <br><span class="time">
+  <%= @post.created_at.strftime('%Y/%m/%d') %>
+  </span><br>
+  <%= image_tag @post.img_url, :class => "image_big" %>
+<br>
+  <br><h10>ごはんどき</h10><br>
+  <%= @post.whattime.name %>
+<br>
+  <br><h10>シチュエーション</h10><br>
+  <%= @post.howmany.name %>
+<br>
+  <br><h10>くわしく！</h10><br><br>
+  <%= @post.free %>
+<br>
+  <br><h10>参考にしたサイト</h10><br>
+  <%= raw Rinku.auto_link(h(@post.website)) %>
+
+<br>
+  <h10>いいね件数: <%= @post.likes.count %></h10><br>
+  <h10>いいねしたユーザー</h10>
+  <% @post.liked_users.each do |user| %>
+    <li><%= user.email %></li>
+  <% end %>
+<br><br><br>
+</div>
+
+<% if current_user.already_liked?(@post) %>
+  <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
+<% else %>
+  <%= button_to 'いいね', post_likes_path(@post) %>
+<% end %>
+<br><br><br>
+<h2 class="wf-nicomoji">コメント</h2>
+<% @comments.each do |c| %>
+  <div>
+    <a href="/users/<%= @post.user.id %>"><%= c.user.email %></a>
+    <%= c.content %>
+    <hr>
+  </div>
+<% end %>
+<br><br>
+<%= form_for [@post, @comment] do |f| %>
+  <%= f.text_field :content %>
+  <br>
+  <%= f.submit 'コメントする' %>
+<% end %>
+
+<%= link_to '編集する', edit_post_path(@post) %> |<%= link_to "削除する", post_path(@post), method: :delete %>
+<%= link_to 'もどる', posts_path %>
+</div>
+    <div class="col-md-1">
+
+    </div>
+</div>
+</center>
