@@ -8,9 +8,9 @@ class Post < ApplicationRecord
   belongs_to :whattime
 
 
-  
+
   has_many :liked_users, through: :likes, source: :user,dependent: :destroy
 
   #Timeline End
-  mount_uploader :img,ImgUploader
+  mount_uploader :img, ImgUploader
 end
